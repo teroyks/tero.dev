@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home - tero.dev</title>
-  <meta name="description" content="A personal blog">
+  <title>Git – Update Only Metadata - tero.dev</title>
+  <meta name="description" content="How to update only metadata in a Git repository.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -21,30 +21,15 @@
     </nav>
   </header>
   <main class="container">
-    <h1>Home</h1>
-    
-<h1>tero.dev</h1>
-
-<section>
-  
-  
-    <article>
-      <h2><a href="/blog/2026/update-git-metadata-only/">Git – Update Only Metadata</a></h2>
-      <time datetime="2026-02-09">February 9, 2026</time>
-      
-        <p>How to update only metadata in a Git repository.</p>
-      
-    </article>
-  
-    <article>
-      <h2><a href="/blog/2026/hello-world/">Hello World</a></h2>
-      <time datetime="2026-02-09">February 9, 2026</time>
-      
-        <p>I guess we&#39;re doing this.</p>
-      
-    </article>
-  
-</section>
+    <h1>Git – Update Only Metadata</h1>
+    <p>A handy tip I picked up a while ago:
+if you need to push something to a remote repository,
+without updating the actual content
+(for example, to trigger a CI/CD pipeline),
+you can update the timestamp and author of the latest commit
+using the following command, and then push it:</p>
+<pre><code class="language-shell">git commit --amend --reset-author
+</code></pre>
 
   </main>
   <footer class="container">
