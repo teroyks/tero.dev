@@ -1,8 +1,7 @@
 /* Custom overrides on top of Pico CSS */
 
-/* light mode */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+/* light mode (default) */
+:root {
     --pico-primary: #3b82c4;
     --pico-primary-hover: #2b6cb0;
     --pico-primary-focus: rgba(43, 108, 176, 0.25);
@@ -12,14 +11,16 @@
     --pico-primary-inverse: #fff;
 }
 
-/* dark mode */
-[data-theme="dark"] {
-    --pico-primary: #72b4e0;
-    --pico-primary-hover: #9acaeb;
-    --pico-primary-focus: rgba(114, 180, 224, 0.25);
-    --pico-primary-background: #2b6cb0;
-    --pico-primary-hover-background: #224e80;
-    --pico-primary-inverse: #fff;
+/* dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --pico-primary: #72b4e0;
+        --pico-primary-hover: #9acaeb;
+        --pico-primary-focus: rgba(114, 180, 224, 0.25);
+        --pico-primary-background: #2b6cb0;
+        --pico-primary-hover-background: #224e80;
+        --pico-primary-inverse: #fff;
+    }
 }
 
 /* headings — subtle teal tint */
@@ -32,8 +33,10 @@ h6 {
     color: #2a4a52;
 }
 
-[data-theme="dark"] :is(h1, h2, h3, h4, h5, h6) {
-    color: #8ec3d0;
+@media (prefers-color-scheme: dark) {
+    :is(h1, h2, h3, h4, h5, h6) {
+        color: #8ec3d0;
+    }
 }
 
 /* underline color matches link color */
@@ -54,10 +57,12 @@ a:visited:hover {
     color: #6b5b95;
 }
 
-[data-theme="dark"] a:visited {
-    color: #b0a0d6;
-}
+@media (prefers-color-scheme: dark) {
+    a:visited {
+        color: #b0a0d6;
+    }
 
-[data-theme="dark"] a:visited:hover {
-    color: #c4b8e3;
+    a:visited:hover {
+        color: #c4b8e3;
+    }
 }
