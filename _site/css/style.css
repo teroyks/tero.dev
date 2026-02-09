@@ -39,6 +39,12 @@ h6 {
     }
 }
 
+/* post listing titles — closer to body text size */
+section > article h2 {
+    font-size: 1.15em;
+    margin-bottom: 0.25em;
+}
+
 /* underline color matches link color */
 a {
     text-decoration-color: currentColor;
