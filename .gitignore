@@ -1,0 +1,10 @@
+# 11ty stuff
+node_modules/
+
+# Mac-specific
+.DS_Store
+
+# My stuff
+CLAUDE.md
+CLAUDE.local.md
+
