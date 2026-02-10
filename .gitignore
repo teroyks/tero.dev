@@ -1,10 +1,18 @@
-# 11ty stuff
+# --- 11ty stuff ---
+
+# published site
+_site/
+# icky javascript stuff
 node_modules/
 
-# Mac-specific
+# --- Mac-specific ---
+
+# directory metadata
 .DS_Store
 
-# My stuff
-CLAUDE.md
-CLAUDE.local.md
+# --- my stuff ---
 
+# robot overlord instructions
+CLAUDE.md
+# sekrit robot overlord instructions
+CLAUDE.local.md
