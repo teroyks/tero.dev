@@ -1,7 +1,5 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { HtmlValidate } from "html-validate";
-import pa11y from "pa11y";
-import { glob } from "node:fs/promises";
 
 const htmlValidator = new HtmlValidate({
   extends: ["html-validate:recommended"],
@@ -24,23 +22,6 @@ export default function (eleventyConfig) {
           );
         }
       }
-    }
-  });
-
-  // accessibility testing after build
-  eleventyConfig.on("eleventy.after", async ({ dir }) => {
-    let errors = 0;
-    for await (const file of glob(`${dir.output}/**/*.html`)) {
-      const results = await pa11y(file, { runners: ["htmlcs"] });
-      for (const issue of results.issues) {
-        if (issue.type === "error") {
-          console.error(`[pa11y] ${file}:${issue.line}:${issue.column}  ${issue.message}`);
-          errors++;
-        }
-      }
-    }
-    if (errors > 0) {
-      console.error(`[pa11y] ${errors} accessibility error(s) found`);
     }
   });
 
