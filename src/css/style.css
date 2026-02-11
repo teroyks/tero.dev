@@ -72,3 +72,8 @@ a:visited:hover {
         color: #c4b8e3;
     }
 }
+
+/* post header — extra spacing below */
+main > header {
+    margin-bottom: 1rem;
+}
