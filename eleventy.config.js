@@ -9,6 +9,7 @@ const htmlValidator = new HtmlValidate({
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg,jpeg,svg,webp,avif}");
 
   // validate HTML output per template
   eleventyConfig.addLinter("html-validate", async function (content) {
