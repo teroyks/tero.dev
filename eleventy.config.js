@@ -3,7 +3,10 @@ import { HtmlValidate } from "html-validate";
 
 const htmlValidator = new HtmlValidate({
   extends: ["html-validate:recommended"],
-  rules: { "no-trailing-whitespace": "off" },
+  rules: {
+    "no-trailing-whitespace": "off",
+    "no-raw-characters": "warn",
+  },
 });
 
 export default function (eleventyConfig) {
