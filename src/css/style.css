@@ -84,6 +84,24 @@ a:visited:hover {
     }
 }
 
+/* site header layout */
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-brand {
+    line-height: 1.2;
+}
+
+.site-brand a {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* post header — extra spacing below */
 main > header {
     margin-bottom: 1rem;
