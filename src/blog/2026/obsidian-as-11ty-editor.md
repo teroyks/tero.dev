@@ -46,7 +46,7 @@ const title = await tp.system.prompt("Title");
 const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 const year = tp.date.now("YYYY");
 await tp.file.move(`blog/${year}/${slug}`);
-%>
+-%>
 ---
 title: <% title %>
 description: .
@@ -55,3 +55,14 @@ tags:
   -
 ---
 ```
+
+The lines between `<%*` and `-%>` are instructions for Templater that are run when this template is applied to a post. (The hyphen in the end tag is for [whitespace control](https://silentvoid13.github.io/Templater/commands/whitespace-control.html): it is necessary because otherwise, processing the Templater commands would leave an empty line in the beginning of the template which would prevent the frontmatter from working.)
+
+Here's what the templater commands do:
+
+- `title`: Asks for the post title in a dialog.
+- `slug`: Creates a version of the post title suitable for a file name.
+- `year`: Determines the current year (which is how I organize my posts).
+- `await`: This line moves the new post under the directory for current year, `blog/YYYY`, and changes its name to the slug.
+
+The frontmatter is pretty standard Eleventy post metadata with some Templater instructions to insert default values for the post title and current date.
