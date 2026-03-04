@@ -1,0 +1,3 @@
+{% macro postDate(date) %}
+<small><time datetime="{{ date.toISOString() | truncate(10, true, '') }}">{{ date | date }}</time></small>
+{% endmacro %}
