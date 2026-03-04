@@ -4,7 +4,7 @@ title: Latest Posts
 ---
 
 <section>
-  {% set posts = collections.blog | reverse %}
+  {% set posts = collections.blog | reverse | batch(10) | first %}
   {% for post in posts %}
     <article>
       <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
