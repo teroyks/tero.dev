@@ -13,6 +13,8 @@ This is a test post.
 ## Section Heading
 
 New section here.
+[Unvisited link](https://example.com/123456)
+[Visited link](/)
 
 ### Subsection Heading
 
