@@ -4,6 +4,8 @@
 _site/
 # icky javascript stuff
 node_modules/
+# obsidian vault info - just for editing content with it
+.obsidian/
 
 # --- Mac-specific ---
 
