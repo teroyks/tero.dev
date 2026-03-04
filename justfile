@@ -9,6 +9,10 @@ build:
 start:
     npm run start
 
+# check accessibility (slow)
+check-accessibility:
+    npm run check:accessibility
+
 # create a new blog post
 new-post title="New Post":
     #!/usr/bin/env bash
