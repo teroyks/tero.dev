@@ -33,3 +33,9 @@ new-post title="New Post":
 
     EOF
     echo "Created $file"
+
+# build the development environment
+init-dev:
+    npm install
+    prek install
+
