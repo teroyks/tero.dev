@@ -1,5 +1,10 @@
 /* Custom overrides on top of Pico CSS */
 
+body {
+    max-width: 70ch;
+    margin-inline: auto;
+}
+
 /* light mode (default) */
 :root {
     --pico-primary: #3b82c4;
