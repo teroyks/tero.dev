@@ -39,9 +39,20 @@ h6 {
     }
 }
 
-/* post listing titles — closer to body text size */
-section > article h2 {
-    font-size: 1.15em;
+/* h2 and h3 — I prefer them a little bit smaller than Pico defaults */
+h2 {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+}
+
+/* post listing titles — smaller for index pages */
+article > h2 {
+    font-size: 1.25em;
     margin-bottom: 0.25em;
 }
 
