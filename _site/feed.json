@@ -15,7 +15,7 @@
       "id": "https://tero.dev/blog/2026/update-git-metadata-only/",
       "url": "https://tero.dev/blog/2026/update-git-metadata-only/",
       "title": "Git – Update Only Metadata",
-      "content_html": "<p>A handy tip I picked up a while ago:\nif you need to push something to a remote repository,\nwithout updating the actual content\n(for example, to trigger a CI/CD pipeline),\nyou can update the timestamp and author of the latest commit\nusing the following command, and then push it:</p>\n<pre><code class=\"language-shell\">git commit --amend --reset-author\n</code></pre>\n",
+      "content_html": "<p>A handy tip I picked up a while ago:\nif you need to push something to a remote repository,\nwithout updating the actual content\n(for example, to trigger a CI/CD pipeline),\nyou can update the timestamp and author of the latest commit\nusing the following command, and then push it:</p>\n<pre class=\"language-shell\"><code class=\"language-shell\"><span class=\"token function\">git</span> commit <span class=\"token parameter variable\">--amend</span> --reset-author</code></pre>\n",
       "date_published": "2026-02-09T00:00:00.000Z",
       "tags": ["git"]
     },
