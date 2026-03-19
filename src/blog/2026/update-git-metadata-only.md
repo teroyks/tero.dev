@@ -2,7 +2,9 @@
 title: Push Metadata Update to Git
 description: How to update only metadata in a Git repository.
 date: 2026-02-09
-tags: git
+tags:
+  - git
+  - command-line
 ---
 
 A handy tip I picked up a while ago:

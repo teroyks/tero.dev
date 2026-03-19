@@ -6,6 +6,7 @@ tags:
   - meta
   - obsidian
   - eleventy
+  - markdown
 ---
 I have been using [Obsidian](https://obsidian.md) since pretty much the first alpha release. It was quite rough at first, but still useful, and it's gotten a lot better along the way---I find myself using it more and more for various purposes that mainly revolve around text-shaped data.
 

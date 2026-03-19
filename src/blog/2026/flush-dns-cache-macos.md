@@ -4,6 +4,7 @@ description: Sometimes fixes spotty internet–caused loading issues.
 date: 2026-02-16
 tags:
   - mac
+  - command-line
 ---
 My internet connection can sometimes be quite spotty (giving Telia the side-eye). It comes back, but unfortunately macOS may already have stored the “sorry, I don’t see anything there” state, which means the site won’t load even after the glorious internet comes back.
 

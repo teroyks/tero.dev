@@ -5,6 +5,7 @@ date: 2026-02-11
 tags:
   - git
   - bash
+  - command-line
 ---
 
 Excluding files from your Git repository is normally done by adding them to the `.gitignore` file.

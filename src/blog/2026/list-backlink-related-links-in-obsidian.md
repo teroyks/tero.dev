@@ -5,6 +5,7 @@ date: 2026-03-05
 tags:
   - obsidian
   - javascript
+  - markdown
 ---
 I have an [Obsidian](https://obsidian.md/) vault for noting down all kinds of miscellaneous things. Sometimes, I want to collect a list of notes linked to in relation to another note. For example, say I have a note called `book purchase`, and I might mention it in a note, saying something like,
 
