@@ -8,7 +8,7 @@ tags:
 ---
 I’ve been building a small [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app) for myself. I wanted it to not reload the app on every start, so I’m using a standard service worker to cache the app locally.
 
-The issue I ran into (yes, this is very 101—haven't had the need to build any before) was that the dev server also cached the app, and naturally did not show any updates I made. Clearing the network cache did nothing: apparently, you need to unregister the web app for the content to be reloaded. Chrome makes it easy, but I am using Safari, and things are [a bit more complicated](https://thevalleyofcode.com/lesson/pwa/unregister-service-workers-in-safari/).
+The issue I ran into (yes, this is very 101—haven't had the need to build any before) was that the dev server also cached the app, and naturally did not show any updates I made. Clearing the network cache did nothing: apparently, you need to unregister the service worker for the content to be reloaded. Chrome makes it easy, but I am using Safari, and things are [a bit more complicated](https://thevalleyofcode.com/lesson/pwa/unregister-service-workers-in-safari/).
 
 1. In the _Develop → Service Workers_ menu, select _localhost_ to open the local service worker dev tool window.
 2. Select the console tab.
