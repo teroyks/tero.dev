@@ -8,6 +8,7 @@ tags:
   - eleventy
   - markdown
 ---
+
 I have been using [Obsidian](https://obsidian.md) since pretty much the first alpha release. It was quite rough at first, but still useful, and it's gotten a lot better along the way---I find myself using it more and more for various purposes that mainly revolve around text-shaped data.
 
 Since Obsidian and Eleventy (which runs this site) both deal with content in Markdown, I wanted to see if they could play nice together so that I could edit my content in Obsidian. I created a vault for the site, and linked Eleventy's `src` directory under it. (I did not want to go all in and require Obsidian, so this keeps the two nicely separate.)

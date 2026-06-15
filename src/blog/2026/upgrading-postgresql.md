@@ -7,6 +7,7 @@ tags:
   - command-line
   - postgres
 ---
+
 My old [PostgreSQL](https://www.postgresql.org) development server was starting to crack at the seams,
 so it was time to upgrade.
 Which is scary!

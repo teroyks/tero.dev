@@ -6,7 +6,8 @@ tags:
   - mac
   - command-line
 ---
-By default, current macOS does not allow opening apps that haven’t been officially signed. If you try opening an app normally, you get an error message saying, “[App name] not opened—Apple could not verify [App name] is free of malware,” and the only options you get is to close the message, or move the app to trash.  This is a measure intended to stave off malware, but sometimes you trust the developer and just want to open their app without forcing them to jump through security hoops for you.
+
+By default, current macOS does not allow opening apps that haven’t been officially signed. If you try opening an app normally, you get an error message saying, “[App name] not opened—Apple could not verify [App name] is free of malware,” and the only options you get is to close the message, or move the app to trash. This is a measure intended to stave off malware, but sometimes you trust the developer and just want to open their app without forcing them to jump through security hoops for you.
 
 ## Trust Me, Bro
 

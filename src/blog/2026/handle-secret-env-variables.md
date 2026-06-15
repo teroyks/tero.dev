@@ -5,6 +5,7 @@ date: 2026-04-17
 tags:
   -
 ---
+
 _Note: There are more sophisticated ways of managing secrets than environment variables. If you need—or already have—that, this is not for you._
 
 A common way of managing secret or semi-secret information, such as API tokens, is having them in environment variables. It's not the safest way, but it is relatively simple, and secure enough for many purposes.

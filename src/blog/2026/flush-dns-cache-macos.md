@@ -6,6 +6,7 @@ tags:
   - mac
   - command-line
 ---
+
 My internet connection can sometimes be quite spotty (giving Telia the side-eye). It comes back, but unfortunately macOS may already have stored the “sorry, I don’t see anything there” state, which means the site won’t load even after the glorious internet comes back.
 
 The solution: manually flush the DNS cache (note: requires running as administrator). Here’s how to do that on a Mac:
