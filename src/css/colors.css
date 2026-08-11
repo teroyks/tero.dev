@@ -1,0 +1,81 @@
+/* Color system: primitives, semantic tokens, Pico mapping */
+
+/* Primitives — the only place raw color values appear */
+:root {
+    --white: #fff;
+
+    --blue-300: #9acaeb;
+    --blue-400: #72b4e0;
+    --blue-600: #3b82c4;
+    --blue-700: #2b6cb0;
+    --blue-800: #224e80;
+
+    --teal-300: #8ec3d0;
+    --teal-800: #2a4a52;
+    --teal-950: #1a2a30;
+
+    --slate-100: #f4f6f8;
+    --slate-200: #c8d6dc;
+    --slate-300: #9aabb5;
+    --slate-400: #7e9aaa;
+    --slate-500: #6e8090;
+    --slate-600: #5a6a72;
+
+    --purple-200: #c4b8e3;
+    --purple-300: #b0a0d6;
+    --purple-500: #7d6ba8;
+    --purple-600: #7b5ea7;
+    --purple-700: #6b5b95;
+
+    --green-300: #8cc88a;
+    --green-600: #4a8f3f;
+
+    --red-300: #e8887c;
+    --red-600: #c44d3b;
+
+    --amber-200: #ebc078;
+    --amber-300: #dbb478;
+    --amber-500: #e09f3e;
+    --amber-700: #9e6a2f;
+}
+
+/* Semantic tokens — light mode (default) */
+:root {
+    --accent: var(--blue-600);
+    --accent-hover: var(--blue-700);
+    --accent-focus: color-mix(in srgb, var(--blue-700) 25%, transparent);
+    /* accent background is mainly for buttons, inputs, etc. */
+    --accent-bg: var(--blue-700);
+    --accent-bg-hover: var(--blue-800);
+    --accent-fg: var(--white);
+
+    --link-visited: var(--purple-500);
+    --link-visited-hover: var(--purple-700);
+    --link-highlight: color-mix(in srgb, var(--blue-600) 8%, transparent);
+
+    --heading: var(--teal-800);
+}
+
+/* Semantic tokens — dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: var(--blue-400);
+        --accent-hover: var(--blue-300);
+        --accent-focus: color-mix(in srgb, var(--blue-400) 25%, transparent);
+
+        --link-visited: var(--purple-300);
+        --link-visited-hover: var(--purple-200);
+
+        --heading: var(--teal-300);
+    }
+}
+
+/* Map semantic tokens onto Pico's variables */
+:root {
+    --pico-primary: var(--accent);
+    --pico-primary-hover: var(--accent-hover);
+    --pico-primary-focus: var(--accent-focus);
+    --pico-primary-background: var(--accent-bg);
+    --pico-primary-hover-background: var(--accent-bg-hover);
+    --pico-primary-inverse: var(--accent-fg);
+}

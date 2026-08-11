@@ -1,29 +1,29 @@
 /* Syntax highlighting colors */
 :root {
-    --syn-text: #2a4a52;
-    --syn-bg: #f4f6f8;
-    --syn-comment: #6e8090;
-    --syn-punctuation: #5a6a72;
-    --syn-keyword: #7b5ea7;
-    --syn-string: #4a8f3f;
-    --syn-number: #2b6cb0;
-    --syn-function: #c44d3b;
-    --syn-operator: #9e6a2f;
-    --syn-variable: #e09f3e;
+    --syn-text: var(--teal-800);
+    --syn-bg: var(--slate-100);
+    --syn-comment: var(--slate-500);
+    --syn-punctuation: var(--slate-600);
+    --syn-keyword: var(--purple-600);
+    --syn-string: var(--green-600);
+    --syn-number: var(--blue-700);
+    --syn-function: var(--red-600);
+    --syn-operator: var(--amber-700);
+    --syn-variable: var(--amber-500);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --syn-text: #c8d6dc;
-        --syn-bg: #1a2a30;
-        --syn-comment: #7e9aaa;
-        --syn-punctuation: #9aabb5;
-        --syn-keyword: #b0a0d6;
-        --syn-string: #8cc88a;
-        --syn-number: #72b4e0;
-        --syn-function: #e8887c;
-        --syn-operator: #dbb478;
-        --syn-variable: #ebc078;
+        --syn-text: var(--slate-200);
+        --syn-bg: var(--teal-950);
+        --syn-comment: var(--slate-400);
+        --syn-punctuation: var(--slate-300);
+        --syn-keyword: var(--purple-300);
+        --syn-string: var(--green-300);
+        --syn-number: var(--blue-400);
+        --syn-function: var(--red-300);
+        --syn-operator: var(--amber-300);
+        --syn-variable: var(--amber-200);
     }
 }
 
