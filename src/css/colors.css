@@ -65,6 +65,7 @@
 
         --link-visited: var(--purple-300);
         --link-visited-hover: var(--purple-200);
+        --link-highlight: color-mix(in srgb, var(--blue-400) 10%, transparent);
 
         --heading: var(--teal-300);
     }
