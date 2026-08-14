@@ -58,6 +58,16 @@ export default function (eleventyConfig) {
     });
   });
 
+  // custom "absoluteUrls" filter for making feed content standalone
+  // usage: {{ content | absoluteUrls(base) }} where base is the page's full URL
+  // rewrite relative href and src values only
+  eleventyConfig.addFilter("absoluteUrls", (html, base) =>
+    html.replace(
+      /(href|src)="(?!https?:|\/\/)([^"]*)"/g,
+      (match, attribute, url) => `${attribute}="${new URL(url, base)}"`,
+    ),
+  );
+
   return {
     dir: {
       input: "src",
