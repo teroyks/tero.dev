@@ -4,14 +4,14 @@ permalink: /feed.json
 ---
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "{{ site.title }}",
+  "title": {{ site.title | dump | safe }},
   "home_page_url": "{{ site.url }}/",
   "feed_url": "{{ site.url }}/feed.json",
   "icon": "{{ site.url }}/icon-512.png",
-  "description": "{{ site.description }}",
+  "description": {{ site.description | dump | safe }},
   "authors": [
     {
-      "name": "{{ site.author }}"
+      "name": {{ site.author | dump | safe }}
     }
   ],
   "language": "en",
@@ -21,7 +21,7 @@ permalink: /feed.json
     {
       "id": "{{ site.url }}{{ post.url }}",
       "url": "{{ site.url }}{{ post.url }}",
-      "title": "{{ post.data.title }}",
+      "title": {{ post.data.title | dump | safe }},
       "content_html": {{ post.templateContent | dump | safe }},
       "date_published": "{{ post.date.toISOString() }}"
       {%- set contentTags = post.data.tags | reject("equalto", "blog") %}
