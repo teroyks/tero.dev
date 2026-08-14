@@ -58,6 +58,21 @@ export default function (eleventyConfig) {
     });
   });
 
+  // Posts have just a date, feed requires datetime, default would be midnight UTC.
+  // Use noon as a safe default instead,
+  // but when posting before noon, use real time so the post won't be timestamped into future.
+  eleventyConfig.addFilter("feedDate", (value) => {
+    const middayOffset = 12 * 60 * 60 * 1000;
+    const withDefaultTime = date =>
+      date.toISOString().endsWith("T00:00:00.000Z")
+        ? new Date(date.getTime() + middayOffset)
+        : date;
+    const notInFuture = date => new Date(Math.min(date, Date.now()));
+    const roundToSeconds = date => new Date(Math.floor(date / 1000) * 1000);
+
+    return roundToSeconds(notInFuture(withDefaultTime(new Date(value)))).toISOString();
+  });
+
   // custom "absoluteUrls" filter for making feed content standalone
   // usage: {{ content | absoluteUrls(base) }} where base is the page's full URL
   // rewrite relative href and src values only
