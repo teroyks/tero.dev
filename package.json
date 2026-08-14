@@ -7,7 +7,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "check:accessibility": "node scripts/check-accessibility.js"
+    "check:accessibility": "node scripts/check-accessibility.js",
+    "check:frontmatter": "node scripts/check-frontmatter.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

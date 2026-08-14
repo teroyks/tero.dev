@@ -13,6 +13,10 @@ start:
 check-accessibility:
     npm run check:accessibility
 
+# check post front matter
+check-frontmatter:
+    npm run check:frontmatter
+
 # create a new blog post
 new-post title="New Post":
     #!/usr/bin/env bash

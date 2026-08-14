@@ -6,3 +6,11 @@ repos:
         args: [--fix]  # Auto-fix violations in place
       - id: rumdl-fmt  # Pure format, always exits 0
 
+  - repo: local
+    hooks:
+      - id: check-frontmatter
+        name: check post front matter
+        entry: node scripts/check-frontmatter.js
+        language: system
+        files: ^src/blog/.*\.md$
+
