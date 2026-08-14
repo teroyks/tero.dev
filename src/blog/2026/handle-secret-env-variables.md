@@ -2,8 +2,6 @@
 title: Handle Secrets with mise and 1Password
 description: Manage secret environment variables automatically.
 date: 2026-04-17
-tags:
-  -
 ---
 
 _Note: There are more sophisticated ways of managing secrets than environment variables. If you need—or already have—that, this is not for you._
