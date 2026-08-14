@@ -8,13 +8,15 @@ permalink: /feed.json
   "home_page_url": "{{ site.url }}/",
   "feed_url": "{{ site.url }}/feed.json",
   "icon": "{{ site.url }}/icon-512.png",
+  "favicon": "{{ site.url }}/icon-192.png",
   "description": {{ site.description | dump | safe }},
   "authors": [
     {
-      "name": {{ site.author | dump | safe }}
+      "name": {{ site.author | dump | safe }},
+      "url": "{{ site.url }}"
     }
   ],
-  "language": "en",
+  "language": {{ site.language | dump | safe }},
   "items": [
     {%- set posts = collections.blog | reverse | batch(20) | first %}
     {%- for post in posts %}

@@ -2,5 +2,6 @@
   "title": "tero.dev",
   "url": "https://tero.dev",
   "description": "A personal blog",
-  "author": "Tero"
+  "author": "Tero",
+  "language": "en"
 }
