@@ -29,6 +29,16 @@ export default function (eleventyConfig) {
     }
   });
 
+  // validate JSON output per template
+  eleventyConfig.addLinter("json-validate", function (content) {
+    if (!this.outputPath?.endsWith(".json")) return;
+    try {
+      JSON.parse(content);
+    } catch (error) {
+      console.error(`[json-validate] ${this.outputPath}  ${error.message}`);
+    }
+  });
+
   // convert straight quotes, ellipsis, and em and en dashes to typographic equivalents
   // use '--' for en dashes and '---' for em dashes
   eleventyConfig.amendLibrary("md", (mdLib) => {
