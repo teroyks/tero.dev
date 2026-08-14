@@ -28,6 +28,7 @@ new-post title="New Post":
     cat > "$file" << EOF
     ---
     title: {{ title }}
+    description:
     date: ${date}
     ---
 

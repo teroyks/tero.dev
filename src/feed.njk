@@ -22,6 +22,9 @@ permalink: /feed.json
       "id": "{{ site.url }}{{ post.url }}",
       "url": "{{ site.url }}{{ post.url }}",
       "title": {{ post.data.title | dump | safe }},
+      {%- if post.data.description %}
+      "summary": {{ post.data.description | dump | safe }},
+      {%- endif %}
       "content_html": {{ post.templateContent | absoluteUrls(site.url + post.url) | dump | safe }},
       "date_published": "{{ post.date.toISOString() }}"
       {%- set contentTags = post.data.tags | reject("equalto", "blog") %}
